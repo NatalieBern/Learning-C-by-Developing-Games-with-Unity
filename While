@@ -1,0 +1,24 @@
+using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEngine;
+
+public class LearningCurve : MonoBehaviour
+{
+
+
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        int playerLives = 3;
+
+        while (playerLives > 0)
+        {
+            Debug.Log("Happy to see you alive!");
+            playerLives--;
+        }
+
+        Debug.Log("You have finished your journey in this world...");
+    }
+}
