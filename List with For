@@ -6,8 +6,6 @@ using UnityEngine;
 public class LearningCurve : MonoBehaviour
 {
 
-    
-
     // Start is called before the first frame update
     void Start()
     {
@@ -16,12 +14,18 @@ public class LearningCurve : MonoBehaviour
 
         questPartyMembers.Add("Zulupa");
         questPartyMembers.Insert(2, "Wupa");
-        questPartyMembers.RemoveAt(1);
 
         Debug.LogFormat("There are {0} members in the group.", questPartyMembers.Count);
 
+        for (int i = 0; i < questPartyMembers.Count; i++)
+        {
+            Debug.LogFormat("Index: {0} - {1}", i, questPartyMembers[i]);
+            
+            if (questPartyMembers[i] == "Lupa");
+            Debug.Log("Hello, Lupa!");
+
+        }
 
     }
-
 
 }
