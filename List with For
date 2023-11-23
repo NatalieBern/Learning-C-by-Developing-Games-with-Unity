@@ -20,6 +20,7 @@ public class LearningCurve : MonoBehaviour
 
         Debug.LogFormat("There are {0} members in the group.", questPartyMembers.Count);
 
+
     }
 
 
