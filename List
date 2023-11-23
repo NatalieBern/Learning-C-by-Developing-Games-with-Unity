@@ -1,0 +1,26 @@
+using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEngine;
+
+public class LearningCurve : MonoBehaviour
+{
+
+    
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        List<string> questPartyMembers = new List<string>()
+        { "Pupa", "Lupa", "Hupa" };
+
+        questPartyMembers.Add("Zulupa");
+        questPartyMembers.Insert(2, "Wupa");
+        questPartyMembers.RemoveAt(1);
+
+        Debug.LogFormat("There are {0} members in the group.", questPartyMembers.Count);
+
+    }
+
+
+}
