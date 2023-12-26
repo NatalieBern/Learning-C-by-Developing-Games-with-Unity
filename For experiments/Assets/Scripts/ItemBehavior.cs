@@ -9,7 +9,7 @@ public class ItemBehavior : MonoBehaviour
 
     void Start()
     {
-        gameManager = GameObject.Find("Game Manager").
+        gameManager = GameObject.Find("GameManager").
             GetComponent<GameBehavior>();
     }
     void OnCollisionEnter(Collision collision)

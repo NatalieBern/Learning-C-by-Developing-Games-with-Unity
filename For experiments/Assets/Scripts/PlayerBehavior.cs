@@ -32,10 +32,6 @@ public class PlayerBehavior : MonoBehaviour
         vInput = Input.GetAxis("Vertical") * moveSpeed;         
         hInput = Input.GetAxis("Horizontal") * rotateSpeed; 
 
-    }
-
-    private void FixedUpdate()
-    {
         if(IsGrounded() && Input.GetKeyDown(KeyCode.Space))
         {
             _rb.AddForce(Vector3.up * jumpVelocity, ForceMode.Impulse);
@@ -49,6 +45,8 @@ public class PlayerBehavior : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
+            Debug.Log("Fire!");
+
             GameObject newBullet = Instantiate(bullet,
             this.transform.position + new Vector3(1, 0, 0),
             this.transform.rotation) as GameObject;
