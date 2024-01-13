@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 6793423640230743285}
   - component: {fileID: 317728402958096836}
   - component: {fileID: 2499565295999709187}
-  - component: {fileID: 8860187955030100818}
   - component: {fileID: 226422029240020136}
+  - component: {fileID: 6705835990394403}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -109,20 +109,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8860187955030100818
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7547798842158520797}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f50a607c2ebf8e1498e535d18842c48e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 10
-  rotateSpeed: 75
 --- !u!54 &226422029240020136
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -150,3 +136,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &6705835990394403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7547798842158520797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f50a607c2ebf8e1498e535d18842c48e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 10
+  rotateSpeed: 75
+  jumpVelocity: 5
+  distanceToGround: 0.1
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  bullet: {fileID: 211859498590761271, guid: 199fcd95fc470144d80067ab2babac25, type: 3}
+  bulletSpeed: 80
