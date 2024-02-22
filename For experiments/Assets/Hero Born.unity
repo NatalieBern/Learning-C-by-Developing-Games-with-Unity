@@ -559,7 +559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d5c545b357f2114cbf03eb0465ced9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camOffset: {x: 0, y: 4.04, z: -7.68}
+  camOffset: {x: 0, y: 2, z: -3}
 --- !u!4 &1531268269 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6696993436506718440, guid: 342c3a5fdff6d234aa23215c2513df0a, type: 3}
@@ -605,32 +605,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6696993436506718440, guid: 342c3a5fdff6d234aa23215c2513df0a, type: 3}
   m_PrefabInstance: {fileID: 5312566874019174218}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2107632007 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7547798842158520797, guid: afcc973ff38866442a7e14d72c15a88f, type: 3}
-  m_PrefabInstance: {fileID: 6442901718843515270}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2107632014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2107632007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f50a607c2ebf8e1498e535d18842c48e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 10
-  rotateSpeed: 75
-  jumpVelocity: 5
-  distanceToGround: 0.1
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  bullet: {fileID: 211859498590761271, guid: 199fcd95fc470144d80067ab2babac25, type: 3}
-  bulletSpeed: 80
 --- !u!1001 &926222018575089808
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -931,6 +905,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6705835990394403, guid: afcc973ff38866442a7e14d72c15a88f, type: 3}
+      propertyPath: rotateSpeed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6705835990394403, guid: afcc973ff38866442a7e14d72c15a88f, type: 3}
+      propertyPath: jumpVelocity
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5677745535596800562, guid: afcc973ff38866442a7e14d72c15a88f, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -995,10 +977,7 @@ PrefabInstance:
     - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7547798842158520797, guid: afcc973ff38866442a7e14d72c15a88f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2107632014}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afcc973ff38866442a7e14d72c15a88f, type: 3}
 --- !u!1001 &6820279684951281590
 PrefabInstance:
