@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class EnemyBehavior : MonoBehaviour
 {
+    public Transform player;   
     public Transform patrolRoute;
     public List<Transform> locations;
 
@@ -15,6 +16,7 @@ public class EnemyBehavior : MonoBehaviour
     private void Start()
     {
         agent = GetComponent <NavMeshAgent>();
+        player = GameObject.Find("Player").transform;
 
         InitializePatrolRoute();
         MoveToNextPatrolLocation();
@@ -48,7 +50,8 @@ public class EnemyBehavior : MonoBehaviour
         {
             if (other.name == "Player")
             {
-                Debug.Log("Player detected - attack!");
+                agent.destination = player.position;
+                Debug.Log("Enemy detected - attack!");
             }
         }
 
