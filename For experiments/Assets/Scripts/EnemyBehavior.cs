@@ -1,23 +1,61 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyBehavior : MonoBehaviour
 {
-           //1
-        void OnTriggerEnter(Collider other)
+    public Transform patrolRoute;
+    public List<Transform> locations;
+
+    private int locationIndex = 0;
+
+    private NavMeshAgent agent;
+
+    private void Start()
+    {
+        agent = GetComponent <NavMeshAgent>();
+
+        InitializePatrolRoute();
+        MoveToNextPatrolLocation();
+    }
+
+    void InitializePatrolRoute()
+    {
+        foreach(Transform child in patrolRoute)
         {
-            //2
+            locations.Add(child);
+        }
+    }
+
+    private void Update()
+    {
+        if(agent.remainingDistance < 0.2f && !agent.pathPending)
+        {
+            MoveToNextPatrolLocation();
+        }
+    }
+
+    void MoveToNextPatrolLocation() 
+    {
+        if (locations.Count == 0)
+            return;      
+        agent.destination = locations[locationIndex].position;
+        locationIndex = (locationIndex + 1) % locations.Count;
+    }
+
+    void OnTriggerEnter(Collider other)
+        {
             if (other.name == "Player")
             {
                 Debug.Log("Player detected - attack!");
             }
         }
 
-        //3
+        
         void OnTriggerExit(Collider other)
         {
-            //4
+           
             if (other.name == "Player")
             {
                 Debug.Log("Player out of range, resume patrol");
