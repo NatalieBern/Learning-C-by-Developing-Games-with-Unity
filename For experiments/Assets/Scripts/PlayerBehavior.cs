@@ -11,7 +11,6 @@ public class PlayerBehavior : MonoBehaviour
     public float jumpVelocity = 5f;
     public float distanceToGround = 0.1f;
     public LayerMask groundLayer;
-
     public GameObject bullet;
     public float bulletSpeed = 100f;
 
@@ -30,7 +29,6 @@ public class PlayerBehavior : MonoBehaviour
 
     void Update() 
     { 
-        
         vInput = Input.GetAxis("Vertical") * moveSpeed;         
         hInput = Input.GetAxis("Horizontal") * rotateSpeed; 
 
@@ -69,8 +67,9 @@ public class PlayerBehavior : MonoBehaviour
         capsuleBottom, distanceToGround, groundLayer, QueryTriggerInteraction.Ignore);
 
         return grounded;
+    }
 
-        void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision collision)
         {
             if (collision.gameObject.name == "Enemy")
             {
@@ -79,4 +78,4 @@ public class PlayerBehavior : MonoBehaviour
         }
 
     }
-}
+
